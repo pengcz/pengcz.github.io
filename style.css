@@ -17,8 +17,7 @@ body {
   margin: 0;
   color: var(--text);
   background: var(--bg);
-  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -76,15 +75,18 @@ header {
 
 .nav-links a { color: #3e454f; }
 .nav-links a:hover { color: var(--accent); text-decoration: none; }
-.nav-links a.active { color: var(--accent); }
 
-main { min-height: calc(100vh - 150px); }
+main { overflow: hidden; }
 
-.page {
+.section {
   padding: 72px 0;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 68px;
 }
 
-.page-title {
+.section:first-child { border-top: 0; }
+
+.section-title {
   margin: 0 0 38px;
   font-size: 32px;
   line-height: 1.2;
@@ -321,7 +323,7 @@ footer {
   }
 
   .hero p { font-size: 16px; }
-  .page { padding: 54px 0; }
-  .page-title { font-size: 28px; }
+  .section { padding: 54px 0; }
+  .section-title { font-size: 28px; }
   .contact-box { grid-template-columns: 1fr; padding: 26px; }
 }

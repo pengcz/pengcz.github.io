@@ -10,7 +10,7 @@ async function loadSections() {
   const main = document.getElementById("content");
 
   for (const name of sections) {
-    const response = await fetch(`sections/${name}.html`);
+    const response = await fetch(`sections/${name}.html`, { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`Could not load ${name}.html`);
     }

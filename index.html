@@ -1,12 +1,61 @@
+---
+---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Changzhi Peng — researcher in electrical discharge physics, plasma modelling, high-voltage engineering and scientific computing." />
-  <title>Changzhi Peng | Academic Homepage</title>
+
+  <title>Changzhi Peng | Electrical Discharge Physics &amp; Plasma Modelling</title>
+  <meta
+    name="description"
+    content="Changzhi Peng is a researcher at CWI Amsterdam working on electrical discharge physics, streamer and leader discharges, long sparks, lightning, plasma modelling and high-voltage engineering."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pengcz.github.io/" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Changzhi Peng | Electrical Discharge Physics &amp; Plasma Modelling" />
+  <meta property="og:description" content="Researcher at CWI Amsterdam working on electrical discharge physics, plasma modelling, long sparks and lightning." />
+  <meta property="og:url" content="https://pengcz.github.io/" />
+  <meta property="og:image" content="https://pengcz.github.io/ProfileImage.png" />
+
+  <link rel="me" href="https://orcid.org/0000-0002-7173-2685" />
+  <link rel="me" href="https://www.researchgate.net/profile/Changzhi-Peng" />
   <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Changzhi Peng Academic Homepage",
+    "url": "https://pengcz.github.io/",
+    "dateModified": "2026-09-10",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://pengcz.github.io/#changzhi-peng",
+      "name": "Changzhi Peng",
+      "alternateName": "Dr. Changzhi Peng",
+      "url": "https://pengcz.github.io/",
+      "image": "https://pengcz.github.io/ProfileImage.png",
+      "jobTitle": "Postdoctoral Researcher / Scientific Staff Member",
+      "description": "Researcher in electrical discharge physics, plasma modelling, long sparks, lightning and high-voltage engineering.",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Centrum Wiskunde & Informatica (CWI)",
+        "url": "https://www.cwi.nl/"
+      },
+      "sameAs": [
+        "https://orcid.org/0000-0002-7173-2685",
+        "https://www.researchgate.net/profile/Changzhi-Peng",
+        "https://github.com/pengcz",
+        "https://www.cwi.nl/en/research/multiscale-dynamics/"
+      ]
+    }
+  }
+  </script>
 </head>
+
 <body>
   <header>
     <div class="container nav">
@@ -21,8 +70,17 @@
     </div>
   </header>
 
-  <!-- All visible page content is loaded from the small files in /sections -->
-  <main id="content"></main>
+  <!--
+    The visible homepage is kept in small editable files inside /sections.
+    Edit only the section you want to change.
+  -->
+  <main>
+    {% include_relative sections/home.html %}
+    {% include_relative sections/research.html %}
+    {% include_relative sections/experience.html %}
+    {% include_relative sections/publications.html %}
+    {% include_relative sections/contact.html %}
+  </main>
 
   <footer>
     <div class="container footer-row">
@@ -30,7 +88,5 @@
       <span>Academic homepage</span>
     </div>
   </footer>
-
-  <script src="site.js"></script>
 </body>
 </html>
